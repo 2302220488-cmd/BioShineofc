@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <h2>Welcome to <span>My Profile</span></h2>
     <ul>
@@ -18,6 +19,7 @@
     </ul>
 </nav>
 
+<!-- CONTACT SECTION -->
 <section class="contact fade-in">
   <div class="contact-card">
     <h2>Contact Me</h2>
@@ -51,10 +53,25 @@
     </div>
   </div>
 </section>
+
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Suren Photography</p>
 </footer>
 
+<!-- JS -->
+<script>
+const contactForm = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
+
+if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        formMsg.textContent = "Thank you! Your message has been sent.";
+        contactForm.reset();
+    });
+}
+</script>
+
 </body>
 </html>
-
