@@ -316,3 +316,134 @@ footer {
         width: 90%;
     }
 }
+/* ================= CONTACT ================= */
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+    background: #2f2f2f;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #3a3a3a, #2e2e2e);
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-card h2 {
+    margin-bottom: 10px;
+    color: #7dd6d1;
+    font-size: 28px;
+}
+
+.contact-card p {
+    margin-bottom: 30px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Input + textarea dengan icon */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7dd6d1;
+    font-size: 18px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 15px 14px 40px; /* ruang untuk icon */
+    border-radius: 10px;
+    border: 2px solid #555;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #7dd6d1;
+    box-shadow: 0 0 10px #7dd6d1;
+}
+
+/* Tombol */
+.contact-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: #7dd6d1;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-card button:hover {
+    background: #5cbdb8;
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Form message feedback */
+#formMsg {
+    margin-top: 15px;
+    color: #7dd6d1;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Social buttons */
+.social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social a {
+    color: #7dd6d1;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #7dd6d1;
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    background: #7dd6d1;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 30px 20px;
+    }
+    .input-group input,
+    .input-group textarea {
+        padding-left: 35px;
+    }
+    .contact-card button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
