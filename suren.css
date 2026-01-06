@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +11,18 @@ body {
     color: #fff;
 }
 
-/* ================= NAV ================= */
+/* ================= NAVBAR ================= */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background: #3a3a3a;
+    flex-wrap: nowrap; /* agar navbar tetap satu baris */
 }
 
 nav h2 {
     font-size: 18px;
-    font-weight: normal;
     font-weight: bold;
 }
 
@@ -34,16 +34,20 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    white-space: nowrap; /* penting supaya tidak wrap */
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #7dd6d1;
+    font-weight: bold;
 }
 
 /* ================= HERO ================= */
@@ -77,6 +81,12 @@ nav a:hover {
     background: #7dd6d1;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.hero-text button:hover {
+    transform: scale(1.05);
 }
 
 .hero-img {
@@ -87,6 +97,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 /* ================= ABOUT ================= */
@@ -131,37 +142,50 @@ nav a:hover {
     background: #7dd6d1;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.about-content button:hover {
+    transform: scale(1.05);
 }
 
 /* ================= PORTFOLIO ================= */
-.gallery {
+.portfolio {
     padding: 80px 0;
     text-align: center;
 }
 
-.gallery-box {
-    display: flex;
-    justify-content: center;
+.portfolio h2 {
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.gallery-box img {
-    width: 200px;
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 5px;
 }
 
 /* ================= CONTACT ================= */
 .contact {
-    padding: 80px 0;
+    padding: 80px 20px;
     text-align: center;
 }
+
 .contact-card {
     background: linear-gradient(135deg, #3a3a3a, #2e2e2e);
     padding: 40px 30px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     max-width: 500px;
-    width: 100%;
-    text-align: center;
+    margin: auto;
 }
 
 .input-group {
@@ -180,7 +204,7 @@ nav a:hover {
 .input-group input,
 .input-group textarea {
     width: 100%;
-    padding: 12px 15px 12px 40px; /* space for icon */
+    padding: 12px 15px 12px 40px;
     border-radius: 8px;
     border: 2px solid #555;
     background: #2f2f2f;
@@ -193,6 +217,23 @@ nav a:hover {
 .input-group textarea:focus {
     border-color: #7dd6d1;
     box-shadow: 0 0 8px #7dd6d1;
+}
+
+.contact button {
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: #7dd6d1;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact button:hover {
+    background: #5cbdb8;
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 .social {
@@ -218,27 +259,6 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-.contact input {
-    padding: 10px;
-    width: 250px;
-    border: none;
-}
-
-.contact button {
-    margin-top: 10px;
-    padding: 10px 25px;
-    background: #7dd6d1;
-    border: none;
-    cursor: pointer;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
 /* ================= FOOTER ================= */
 footer {
     background: #222;
@@ -247,47 +267,19 @@ footer {
     font-size: 13px;
     color: #aaa;
 }
-/* PORTFOLIO */
-.portfolio {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.portfolio h2 {
-    margin-bottom: 40px;
-}
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    white-space: nowrap; /* PENTING */
-}
-.portfolio-grid {
-    width: 75%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: #3a3a3a;
-    flex-wrap: nowrap;   /* PENTING */
-}
-
-.portfolio-grid img {
-    width: 100%;
-    border-radius: 5px;
-}
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
     nav {
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
@@ -300,61 +292,20 @@ nav {
     .hero-text,
     .hero-img {
         width: 100%;
-        padding: 40px;
-    }
-    /* =========================
-   RESPONSIVE MOBILE
-========================= */
-@media (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .hero-text {
-        width: 100%;
         padding: 40px 20px;
-        text-align: center;
     }
 
     .hero-img {
-        width: 100%;
         height: 250px;
     }
 
-    .hero-img img {
-        height: 100%;
-    }
-
     .about-container {
-        flex-direction: column;
         gap: 30px;
         width: 90%;
     }
 
     .slider {
         width: 90%;
-    }
-
-    .arrow.left {
-        left: 5px;
-    }
-
-    .arrow.right {
-        right: 5px;
     }
 
     .portfolio-grid {
@@ -365,6 +316,3 @@ nav {
         width: 90%;
     }
 }
-
-}
-
