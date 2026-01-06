@@ -373,3 +373,56 @@ footer {
         padding: 12px;
     }
 }
+/* Social media modern buttons */
+.social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+/* Instagram */
+.social-btn.insta {
+    background: #E1306C;
+}
+.social-btn.insta:hover {
+    background: #c72b5d;
+    transform: scale(1.05);
+}
+
+/* Email */
+.social-btn.email {
+    background: #7dd6d1;
+    color: #000;
+}
+.social-btn.email:hover {
+    background: #5cbdb8;
+    transform: scale(1.05);
+}
+
+/* WhatsApp */
+.social-btn.wa {
+    background: #25D366;
+}
+.social-btn.wa:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/* Icon styling */
+.social-btn i {
+    font-size: 18px;
+}
+
