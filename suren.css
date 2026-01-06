@@ -84,6 +84,43 @@ nav a.active {
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
+/* Tombol utama */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 10px 10px 0 0;
+    background: #7dd6d1;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #5cbdb8;
+    transform: scale(1.05);
+}
+
+/* Tombol outline */
+.btn-outline {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 10px 0 0 0;
+    background: transparent;
+    color: #7dd6d1;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #7dd6d1;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #7dd6d1;
+    color: #000;
+    transform: scale(1.05);
+}
 
 .hero-text button:hover {
     transform: scale(1.05);
@@ -446,4 +483,5 @@ footer {
         padding: 12px;
     }
 }
+
 
