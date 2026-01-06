@@ -77,7 +77,7 @@ nav a.active {
     margin-bottom: 20px;
 }
 
-/* Tombol utama */
+/* Tombol utama dan outline */
 .btn, .btn-outline {
     display: inline-block;
     padding: 12px 28px;
@@ -88,22 +88,22 @@ nav a.active {
     transition: all 0.3s ease;
 }
 
-/* Tombol solid */
 .btn {
     background: #7dd6d1;
     color: #000;
 }
+
 .btn:hover {
     background: #5cbdb8;
     transform: scale(1.05);
 }
 
-/* Tombol outline */
 .btn-outline {
     background: transparent;
     color: #7dd6d1;
     border: 2px solid #7dd6d1;
 }
+
 .btn-outline:hover {
     background: #7dd6d1;
     color: #000;
@@ -135,10 +135,6 @@ nav a.active {
     gap: 50px;
 }
 
-.slider {
-    width: 300px;
-}
-
 .slider img {
     width: 100%;
     border-radius: 5px;
@@ -166,6 +162,7 @@ nav a.active {
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
+
 .about-content button:hover {
     transform: scale(1.05);
 }
@@ -257,7 +254,7 @@ nav a.active {
     box-shadow: 0 0 10px #7dd6d1;
 }
 
-/* Tombol */
+/* Tombol kirim */
 .contact-card button {
     width: 100%;
     padding: 14px;
@@ -277,7 +274,7 @@ nav a.active {
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* Form message feedback */
+/* Pesan berhasil dikirim */
 #formMsg {
     margin-top: 15px;
     color: #7dd6d1;
@@ -285,7 +282,7 @@ nav a.active {
     font-size: 15px;
 }
 
-/* Social buttons */
+/* Tombol sosial media */
 .social {
     margin-top: 30px;
     display: flex;
@@ -355,7 +352,7 @@ footer {
     }
 
     .slider {
-        width: 90%;
+        width: 100%;
     }
 
     .portfolio-grid {
