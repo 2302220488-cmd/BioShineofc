@@ -18,16 +18,43 @@
     </ul>
 </nav>
 
-<section class="contact">
+<section class="contact fade-in">
+  <div class="contact-card">
     <h2>Contact Me</h2>
-    <input type="email" placeholder="Your email">
-    <br><br>
-    <button>SEND</button>
-</section>
+    <p>Send me a message or reach out via social media!</p>
 
+    <form id="contactForm">
+      <div class="input-group">
+        <span class="icon">&#128100;</span>
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="input-group">
+        <span class="icon">&#9993;</span>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="input-group">
+        <span class="icon">&#9998;</span>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p id="formMsg"></p>
+
+    <div class="social">
+      <a href="https://instagram.com/" target="_blank">Instagram</a>
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="https://wa.me/123456789">WhatsApp</a>
+    </div>
+  </div>
+</section>
 <footer>
     <p>© 2026 Suren Photography</p>
 </footer>
 
 </body>
 </html>
+
