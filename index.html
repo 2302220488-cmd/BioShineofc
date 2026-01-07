@@ -13,7 +13,7 @@
     <div class="hero-overlay">
         <h1>BioShine</h1>
         <p class="hero-text">
-            Lilin aromaterapi alami untuk menciptakan ketenangan dan kenyamanan ruangan
+            Lilin aromaterapi alami untuk ketenangan dan kenyamanan ruangan
         </p>
         <a href="#order" class="btn">Order Sekarang</a>
     </div>
@@ -27,51 +27,14 @@
     </p>
 </section>
 
-<section class="gallery">
-    <h2>Galeri Produk</h2>
-    <div class="gallery-grid">
-        <img src="herbal02.jpg" alt="Herbal">
-        <img src="jeruk02.avif" alt="Jeruk">
-        <img src="lavender02.jpg" alt="Lavender">
-        <img src="mawar02.jpeg" alt="Mawar">
-        <img src="vanila02.jpeg" alt="Vanila">
-    </div>
-</section>
-
 <section class="aroma">
     <h2>Varian Aroma</h2>
     <div class="aroma-grid">
-
-        <div class="aroma-card">
-            <img src="lavender01.jpg" alt="Lavender">
-            <h3>Lavender</h3>
-            <p>Menenangkan dan membantu relaksasi</p>
-        </div>
-
-        <div class="aroma-card">
-            <img src="herbal01.webp" alt="Herbal">
-            <h3>Herbal</h3>
-            <p>Aroma alami yang segar</p>
-        </div>
-
-        <div class="aroma-card">
-            <img src="jeruk01.webp" alt="Jeruk">
-            <h3>Jeruk</h3>
-            <p>Menyegarkan dan meningkatkan mood</p>
-        </div>
-
-        <div class="aroma-card">
-            <img src="mawar01.jpg" alt="Mawar">
-            <h3>Mawar</h3>
-            <p>Lembut dan romantis</p>
-        </div>
-
-        <div class="aroma-card">
-            <img src="vanila01.jpg" alt="Vanila">
-            <h3>Vanila</h3>
-            <p>Manis dan hangat</p>
-        </div>
-
+        <div class="aroma-card"><h3>Lavender</h3></div>
+        <div class="aroma-card"><h3>Herbal</h3></div>
+        <div class="aroma-card"><h3>Jeruk</h3></div>
+        <div class="aroma-card"><h3>Mawar</h3></div>
+        <div class="aroma-card"><h3>Vanila</h3></div>
     </div>
 </section>
 
@@ -80,8 +43,8 @@
     <h2>Order BioShine</h2>
     <p>Silakan isi data di bawah untuk melakukan pemesanan</p>
 
-    <div class="order-form">
-        <input type="text" id="nama" placeholder="Nama Lengkap" required>
+    <form class="order-form" id="orderForm">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required><br><br>
 
         <select id="varian" required>
             <option value="">Pilih Varian Aroma</option>
@@ -90,14 +53,14 @@
             <option>Jeruk</option>
             <option>Mawar</option>
             <option>Vanila</option>
-        </select>
+        </select><br><br>
 
-        <input type="number" id="jumlah" placeholder="Jumlah" min="1" required>
+        <input type="number" id="jumlah" placeholder="Jumlah" min="1" required><br><br>
 
-        <textarea id="catatan" placeholder="Catatan (opsional)"></textarea>
+        <textarea id="catatan" placeholder="Catatan (opsional)"></textarea><br><br>
 
-        <button class="btn" onclick="kirimWA()">Pesan Sekarang</button>
-    </div>
+        <button type="submit" class="btn">Pesan Sekarang</button>
+    </form>
 </section>
 
 <footer>
